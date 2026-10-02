@@ -8,7 +8,8 @@ clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
 
 pergunta = clientSocket.recv(1024).decode()
-escolha = input(pergunta)
+print(pergunta)
+escolha = input()
 clientSocket.send(escolha.encode())
 
 # o servidor fecha a conexão depois de responder, então lemos até acabar
